@@ -1,0 +1,97 @@
+/* Стили для страницы "О нас" */
+#about {
+    padding: 80px 0;
+    background: linear-gradient(rgba(255, 249, 245, 0.9), rgba(255, 249, 245, 0.9)),
+                url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    color: #5a3e2a;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+#about h2:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #d4a373;
+    bottom: -10px;
+    left: 25%;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 25px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #5a3e2a;
+    padding: 0 20px;
+}
+
+/* Блок с командой (если добавите позже) */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.team-member {
+    width: 250px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f0e6dd;
+    margin-bottom: 15px;
+}
+
+/* Блок с принципами работы */
+.principles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.principle-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.principle-icon {
+    font-size: 2.5em;
+    color: #d4a373;
+    margin-bottom: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    #about {
+        padding: 60px 20px;
+        background-attachment: scroll;
+    }
+
+    .principles {
+        grid-template-columns: 1fr;
+    }
+}

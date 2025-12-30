@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог — Кондитерская Дель Луна</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="site-header">
+        <h1><a href="index.html">Дель Луна</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="order.html">Оформление заказа</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Каталог -->
+    <section id="catalog">
+        <h2>Наш ассортимент:</h2>
+        <div class="product-list">
+            <article class="product-item">
+                <div class="slider-container">
+        <img src="images/cake.jpg" alt="Торты" id="cake-slide">
+        
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+                
+                <h3>Торты</h3>
+                <p>Шоколадные, фруктовые, карамельные... на любой вкус.</p>
+                <button onclick="addToCart('cake')">Купить</button>
+            </article>
+
+            <article class="product-item">
+                <img src="images/pie.jpg" alt="Пироги">
+                <h3>Пироги</h3>
+                <p>Закрытые и открытые пироги с ягодами и кремом.</p>
+                <button onclick="addToCart('pie')">Купить</button>
+            </article>
+
+            <article class="product-item">
+                <img src="images/crouassan.jpg" alt="Круассаны">
+                <h3>Круассаны</h3>
+                <p>Круассаны с шоколадной начинкой</p>
+                <button onclick="addToCart('pie')">Купить</button>
+            </article>
+
+            <article class="product-item">
+                <img src="images/ecler.jpg" alt="Эклеры">
+                <h3>Эклеры</h3>
+                <p>Эклеры с шоколадной глазурью</p>
+                <button onclick="addToCart('pie')">Купить</button>
+            </article>
+
+            <article class="product-item">
+                <img src="images/cheezecake.jpg" alt="Чизкейки">
+                <h3>Чизкейки</h3>
+                <p>Чизкейки с: малиной, шоколадом, манго-маракуей и т.д.</p>
+                <button onclick="addToCart('pie')">Купить</button>
+            </article>
+
+            <article class="product-item">
+                <img src="images/triffle.jpg" alt="Трайфлы">
+                <h3>Трайфлы</h3>
+                <p>Трайфлы с разными начинками</p>
+                <button onclick="addToCart('pie')">Купить</button>
+            </article>
+
+            <!-- Остальные товары -->
+        </div>
+    </section>
+
+    <!-- Подвал страницы -->
+    <footer>
+        <p>&copy; Кондитерская Дель Луна | Тел.: +7 (495) 123-45-67 | Email: info@delluna.ru</p>
+    </footer>
+<div id="cart-notification" class="cart-notification">Товар добавлен в корзину!</div>
+    <script src="scripts.js"></script>
+</body>
+</html>
